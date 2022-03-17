@@ -284,7 +284,6 @@ export class AreaSeries extends CartesianSeries {
                 } else {
                     continue;
                 }
-                // xData.push(isContinuous(datum[xKey]) ? datum[xKey] : undefined);
             } else {
                 // i.e. category axis
                 const xDatum = isDiscrete(datum[xKey]) ? datum[xKey] : String(datum[xKey]);
@@ -346,6 +345,7 @@ export class AreaSeries extends CartesianSeries {
                 } else if (total.sum < yMin) {
                     yMin = total.sum;
                 }
+
             }
 
             if (!(normalized && normalizedTo)) {
